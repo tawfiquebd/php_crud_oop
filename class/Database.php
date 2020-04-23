@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class Database{
 	// property
@@ -10,6 +11,10 @@ class Database{
 	public $link;
 	public $error;
 
+	public function __construct(){
+		$this->connectDB();
+	}
+
 	private function connectDB(){
 		// mysqli connection
 		$this->link = new mysqli($this->host, $this->user, $this->password, $this->dbname);
@@ -20,6 +25,18 @@ class Database{
 		}
 	}
 
+
+	// Select or Read Database
+	public function select($query){
+		$result = $this->link->query($query) or die ($this->link->error.__LINE__);
+		if($result->num_rows > 0){
+			return $result;
+		}
+		else{
+			return false;
+		}
+
+	}
 
 }
 
