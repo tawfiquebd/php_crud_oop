@@ -15,11 +15,11 @@ include_once 'class/Database.php' ;
 	<table class="table">
 		<thead>
 			<tr>
-				<th width="25%">SL.</th>
-				<th width="25%">Name</th>
-				<th width="25%">Email</th>
-				<th width="25%">Skill</th>
-				<th width="25%">Action</th>
+				<th>SL.</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Skill</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -31,11 +31,11 @@ include_once 'class/Database.php' ;
 			?>
 
 			<tr>
-				<td width="25%"><?php echo $id?></td>
-				<td width="50%"><?php echo $row['name']?></td>
-				<td width="25%"><?php echo $row['email']?></td>
-				<td width="25%"><?php echo $row['skill']?></td>
-				<td width="25%"><a href="update.php?id=<?php echo $id?>">Edit</a></td>
+				<td><?php echo $id?></td>
+				<td><?php echo $row['name']?></td>
+				<td><?php echo $row['email']?></td>
+				<td><?php echo $row['skill']?></td>
+				<td><a href="update.php?id=<?php echo $id?>">Edit</a></td>
 			</tr>
 
 			<?php } ?>

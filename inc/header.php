@@ -8,7 +8,8 @@
   		font-family:verdana
 	}
   	.phpcoding{
-  		width:900px; 
+  		width:80%; 
+  		max-width: 960px;
   		margin: 0 auto;
   		background:#f1f1f1
   	}
@@ -22,11 +23,8 @@
 		margin:0
 	}
 	.maincontent{
-		width: 80%;
-		max-width: 960px;
-		margin: 0 auto;
+		height: 400px;
 		overflow: hidden;
-		min-height:400px;
 		padding:20px;
 	}
 	.table {
@@ -34,8 +32,13 @@
 		text-align: center;
 		border: 1px solid #000;
 	}
-	.table tr, th , td{
+	.table th{
+		background: #ccc;
+	}
+	.table td{
+		background: #ddd;
 		border: 1px solid #000;
+		padding: 5px;
 	}
 	
 
