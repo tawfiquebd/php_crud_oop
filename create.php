@@ -45,8 +45,10 @@ include_once 'class/Database.php' ;
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="submit" value="Save">
-				<input type="reset" name="reset" value="Reset"></td>
+				<td>
+					<input type="submit" name="submit" value="Save">
+					<input type="reset" name="reset" value="Reset">
+				</td>
 			</tr>
 		</tbody>
 	</table>

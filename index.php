@@ -30,18 +30,18 @@ include_once 'class/Database.php' ;
 		</thead>
 		<tbody>
 			<?php if($read) { 
-				$id = 0;
+				$sl = 0;
 			?>
 			<?php while($row = $read->fetch_assoc()){ 
-				$id++;
+				$sl++;
 			?>
 
 			<tr>
-				<td><?php echo $id?></td>
+				<td><?php echo $sl?></td>
 				<td><?php echo $row['name']?></td>
 				<td><?php echo $row['email']?></td>
 				<td><?php echo $row['skill']?></td>
-				<td><a href="update.php?id=<?php echo $id?>">Edit</a></td>
+				<td><a href="update.php?id=<?php echo urlencode($row['id'])?>">Edit</a></td>
 			</tr>
 
 			<?php } ?>

@@ -23,9 +23,8 @@
 		margin:0
 	}
 	.maincontent{
-		height: 400px;
 		overflow: hidden;
-		padding:20px;
+		padding:30px;
 	}
 	.table {
 		width: 100%;
@@ -58,14 +57,17 @@
 	input[type="submit"]{
 		font-size: 16px;
 		padding: 10px 20px;
-		width: 48%;
+		width: 32%;
 		background: #3dc824;
+	}
+	input.delete{
+		background: red;
 	}
 	input[type="reset"] {
 		font-size: 16px;
 		padding: 10px 20px;
-		width: 48%;
-		background: #ec1a1a;
+		width: 32%;
+		background: #8a8fb0;
 	}
 	span{
 		margin: 20px 0;

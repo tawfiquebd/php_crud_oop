@@ -50,6 +50,31 @@ class Database{
 		}
 	}
 
+	// Update data
+	public function update($query){
+		$update_row = $this->link->query($query) or die($this->link->error.__LINE__);
+		if($update_row){
+			header("location:index.php?msg=".urlencode('Data updated successfully!'));
+			exit();
+		}
+		else{
+			die("Error :(".$this->link->errno.")".$this->link->error);
+		}
+	}
+
+	// Delete data
+	public function delete($query){
+		$delete_row = $this->link->query($query) or die($this->link->error.__LINE__);
+		if($delete_row){
+			header("location:index.php?msg=".urlencode('Data deleted successfully!'));
+			exit();
+		}
+		else{
+			die("Error :(".$this->link->errno.")".$this->link->error);
+		}
+	}
+
+
 }
 
 
