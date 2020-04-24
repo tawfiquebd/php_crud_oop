@@ -28,7 +28,7 @@ class Database{
 
 	// Select or Read Database
 	public function select($query){
-		$result = $this->link->query($query) or die ($this->link->error.__LINE__);
+		$result = $this->link->query($query) or die($this->link->error.__LINE__);
 		if($result->num_rows > 0){
 			return $result;
 		}
@@ -36,6 +36,18 @@ class Database{
 			return false;
 		}
 
+	}
+
+	// Insert/Create data
+	public function create($query){
+		$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
+		if($insert_row){
+			header("location:index.php?msg=".urlencode('Data inserted successfully!'));
+			exit();
+		}
+		else{
+			die("Error :(".$this->link->errno.")".$this->link->error);
+		}
 	}
 
 }

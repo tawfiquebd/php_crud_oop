@@ -11,6 +11,12 @@ include_once 'class/Database.php' ;
 
 ?>
 
+<?php
+	if (isset($_GET['msg'])) {
+		echo "<span style='color:green;'>" .$_GET['msg']. "</span>" ;
+	}
+
+?>
 
 	<table class="table">
 		<thead>
@@ -45,7 +51,7 @@ include_once 'class/Database.php' ;
 		</tbody>
 	</table>
 
-
+	<a class="btn" href="create.php">Create</a>
 
 
 
